@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "Si usas este software, cítalo con estos metadatos."
+title: "CurIA"
+type: software
+authors:
+  - family-names: "Borrás Rocher"
+    given-names: "Fernando"
+    affiliation: "Universidad Miguel Hernández de Elche"
+    orcid: "https://orcid.org/0000-0002-5519-4573"
+  - family-names: "Pérez Juan"
+    given-names: "José Antonio"
+    affiliation: "Universidad Miguel Hernández de Elche"
+    orcid: "https://orcid.org/0000-0002-9973-683X"
+  - family-names: "Moreno Tejada"
+    given-names: "Sara"
+    affiliation: "Universidad Miguel Hernández de Elche"
+    orcid: "https://orcid.org/0000-0003-3154-7730"
+doi: "10.5281/zenodo.24111387"
+version: "1.0.0"
+date-released: "2026-11-10"
+url: "https://fborrasumh.github.io/curia/"
+repository-code: "https://github.com/fborrasumh/curia"
+license: MIT

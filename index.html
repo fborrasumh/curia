@@ -507,7 +507,7 @@ table{border-collapse:collapse;width:100%;font-size:13.8px}th{background:var(--p
     <div class="zona n"><h4 data-i18n="La IA (con tu clave)">La IA (con tu clave)</h4><ul data-i18n="zi"><li>Interpreta a clientes, abogados, diputados y tutores</li><li>Comenta tu razonamiento sin ponerte nota</li><li>Sin clave, los personajes responden en modo guiado</li></ul></div></div>
   <h2 class="sec-title" data-i18n="Dónde va cada cosa">Dónde va cada cosa</h2>
   <div class="zonas"><div class="zona l"><h4 data-i18n="Siempre en tu ordenador">Siempre en tu ordenador</h4><ul data-i18n="s.zl"><li>Tus respuestas, tus comentarios y tu progreso, guardados en este navegador</li><li>Tu clave de IA</li><li>Las correcciones y las descargas</li></ul></div>
-    <div class="zona n"><h4 data-i18n="Sale hacia tu proveedor de IA">Sale hacia tu proveedor de IA</h4><ul data-i18n="s.zn"><li>Solo cuando hablas con un personaje o pides comentario: tu mensaje y el material del caso, con los datos personales enmascarados</li><li>Antes del primer envío ves lo que sale</li></ul></div></div>
+    <div class="zona n"><h4 data-i18n="Sale hacia tu proveedor de IA">Sale hacia tu proveedor de IA</h4><ul data-i18n="s.zn"><li>Solo cuando hablas con un personaje o pides comentario: tu mensaje y el material del caso, con los datos personales enmascarados</li><li>Antes del primer envío ves lo que sale, salvo en la consulta jurídica, donde mostrarlo desvelaría el caso</li></ul></div></div>
 </section>
 
 <section class="screen" data-step="1">
@@ -1628,10 +1628,11 @@ _cierres.mEnvio = () => cierraEnvio(false);
 $('envioOk').onchange = () => { $('envioSi').disabled = !$('envioOk').checked; };
 $('envioSi').onclick = () => cierraEnvio(true); $('envioNo').onclick = () => cierraEnvio(false);
 /* llamada a la IA con enmascarado y aviso; devuelve null si se cancela */
-async function ia(prompt, max = 1500) {
+/* aviso=false: sin ventana previa (la consulta jurídica: la muestra del envío desvelaría la ficha del caso) */
+async function ia(prompt, max = 1500, aviso = true) {
   if (!pideClave()) return null;
   const {t: tx, n} = scrub(prompt);
-  if (!(await pideEnvio(tx, n))) return null;
+  if (aviso && !(await pideEnvio(tx, n))) return null;
   return llmJSON([{role: 'system', content: SYS_JSON}, {role: 'user', content: tx}], {max});
 }
 async function conEspera(btn, fn) { if (btn.disabled) return; btn.disabled = true; const h = btn.innerHTML; btn.innerHTML = '<span class="spin"></span> ' + esc(t('Pensando…')); try { await fn(); } catch (e) { toast(e.message, 8000); } finally { btn.disabled = false; btn.innerHTML = h; } }
@@ -1689,7 +1690,7 @@ $('coEnviar').onclick = () => conEspera($('coEnviar'), async () => {
   const q = $('coIn').value.trim(); if (!q) return toast(t('Escribe o dicta tu pregunta'));
   const caso = CASO(), s = coS(); let resp, ids, av = '';
   if (conIA()) {
-    const raw = await ia(promptCliente(caso, S.nivel, s.hist, q), 600); if (!raw) return;
+    const raw = await ia(promptCliente(caso, S.nivel, s.hist, q), 600, false); if (!raw) return;
     resp = String(raw.respuesta || '').trim(); ids = hechosValidos(raw.hechos, caso);
     const ficha = caso.hechos.map(h => h.txt).join(' ') + ' ' + caso.y; const ny = anyosNuevos(resp, ficha);
     if (ny.length) av = t('El personaje menciona un año que no está en su ficha: {0}. No lo tomes como dato.', ny.join(', '));

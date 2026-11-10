@@ -40,8 +40,10 @@ async def main():
         await p.fill('#dRazon', 'Se aplica el Decreto de Nueva Planta de 1707 porque Valencia perdió els Furs.'); await p.click('#btnDict'); await p.wait_for_timeout(200)
         d = await p.inner_text('#coDict'); check('dictamen corregido por código (derecho bien, tribunal mal)', '✓ Derecho aplicable' in d and '✗ Tribunal' in d and 'Te faltó preguntar' in d)
         # consulta con IA simulada
-        await p.evaluate("localStorage.setItem(PROV.openai.k,'sk-test-clave-larga-de-prueba-123'); ENVIO_OK=true")
+        await p.evaluate("localStorage.setItem(PROV.openai.k,'sk-test-clave-larga-de-prueba-123'); ENVIO_OK=false")
         await p.fill('#coIn', '¿De dónde es?'); await p.click('#coEnviar'); await h.esp("document.querySelector('#coChat').innerText.includes('1690')")
+        check('consulta: no se muestra la ficha del caso antes de enviar', not await p.is_visible('#mEnvio') and await p.evaluate("ENVIO_OK") is False)
+        await p.evaluate("ENVIO_OK=true")
         t = await p.inner_text('#coChat'); check('IA: avisa del año que no está en la ficha', '1690' in t and '⚠' in t)
         check('IA: los ids inventados no cuentan', 'inventado' not in json.dumps(await p.evaluate("S.co.c1.obt")))
         await p.click('#btnComDict'); await h.esp("document.querySelector('#coDict .cu-ia')")

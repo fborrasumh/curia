@@ -35,10 +35,11 @@ _cierres.mEnvio = () => cierraEnvio(false);
 $('envioOk').onchange = () => { $('envioSi').disabled = !$('envioOk').checked; };
 $('envioSi').onclick = () => cierraEnvio(true); $('envioNo').onclick = () => cierraEnvio(false);
 /* llamada a la IA con enmascarado y aviso; devuelve null si se cancela */
-async function ia(prompt, max = 1500) {
+/* aviso=false: sin ventana previa (la consulta jurídica: la muestra del envío desvelaría la ficha del caso) */
+async function ia(prompt, max = 1500, aviso = true) {
   if (!pideClave()) return null;
   const {t: tx, n} = scrub(prompt);
-  if (!(await pideEnvio(tx, n))) return null;
+  if (aviso && !(await pideEnvio(tx, n))) return null;
   return llmJSON([{role: 'system', content: SYS_JSON}, {role: 'user', content: tx}], {max});
 }
 async function conEspera(btn, fn) { if (btn.disabled) return; btn.disabled = true; const h = btn.innerHTML; btn.innerHTML = '<span class="spin"></span> ' + esc(t('Pensando…')); try { await fn(); } catch (e) { toast(e.message, 8000); } finally { btn.disabled = false; btn.innerHTML = h; } }
@@ -96,7 +97,7 @@ $('coEnviar').onclick = () => conEspera($('coEnviar'), async () => {
   const q = $('coIn').value.trim(); if (!q) return toast(t('Escribe o dicta tu pregunta'));
   const caso = CASO(), s = coS(); let resp, ids, av = '';
   if (conIA()) {
-    const raw = await ia(promptCliente(caso, S.nivel, s.hist, q), 600); if (!raw) return;
+    const raw = await ia(promptCliente(caso, S.nivel, s.hist, q), 600, false); if (!raw) return;
     resp = String(raw.respuesta || '').trim(); ids = hechosValidos(raw.hechos, caso);
     const ficha = caso.hechos.map(h => h.txt).join(' ') + ' ' + caso.y; const ny = anyosNuevos(resp, ficha);
     if (ny.length) av = t('El personaje menciona un año que no está en su ficha: {0}. No lo tomes como dato.', ny.join(', '));

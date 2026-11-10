@@ -20,7 +20,7 @@ La IA nunca pone nota: las frases que la contienen se eliminan.
 
 ## Cómo se usa la IA
 
-Con la propia clave de OpenAI, Google Gemini o Anthropic Claude, que se guarda solo en el navegador. Cada persona paga su propio uso. Antes del primer envío se muestra lo que sale, con los datos personales enmascarados.
+Con la propia clave de OpenAI, Google Gemini o Anthropic Claude, que se guarda solo en el navegador. Cada persona paga su propio uso. Los datos personales se enmascaran siempre. Antes del primer envío se muestra lo que sale, salvo en la consulta jurídica, donde la muestra desvelaría la ficha del caso.
 
 ## Voz
 

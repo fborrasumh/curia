@@ -4,6 +4,8 @@ Sistema de aprendizaje de la asignatura **1193 Historia del Derecho** (Grado en 
 
 **Usar la app:** https://fborrasumh.github.io/curia/
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24111387.svg)](https://doi.org/10.5281/zenodo.24111387)
+
 **Idiomas:** español (por defecto), inglés y portugués; selector en la barra superior (o `?lang=en` / `?lang=pt`). Los contenidos de las unidades didácticas (temas, pasajes, preguntas nuevas y casos) están en castellano, la lengua de la asignatura; la IA responde en el idioma elegido.
 
 ## Qué hace

@@ -1,0 +1,111 @@
+<div class="topbar">
+  <div class="tb-in">
+    <button class="logo" id="goHome" type="button" aria-label="Inicio" data-i18n-attr="aria-label:Inicio"><span class="anv"><svg class="i"><use href="#i-scale"/></svg></span><span>Cur<em>IA</em></span></button>
+    <nav class="stepper" id="stepper" aria-label="Pasos" data-i18n-attr="aria-label:Pasos"></nav>
+    <div class="tb-tools"><div class="tb-lang" id="langBox"><select id="selLang" class="tb-sel" aria-label="Idioma" data-i18n-attr="aria-label:Idioma"></select></div><button class="tb-btn" id="btnIA" type="button"><svg class="i"><use href="#i-key"/></svg><span class="lbl" data-i18n="IA">IA</span></button><button class="tb-btn" id="btnHelp" type="button"><svg class="i"><use href="#i-help"/></svg><span class="lbl" data-i18n="Ayuda">Ayuda</span></button></div>
+  </div>
+  <div class="progress"><span id="progBar"></span></div>
+</div>
+
+<main id="app">
+<section class="screen" data-step="0">
+  <div class="hero">
+    <p class="eyebrow" data-i18n="hero.eyebrow">Historia del Derecho · 1193 · Grado en Derecho · Universidad Miguel Hernández de Elche</p>
+    <h1 data-i18n="hero.h1">Historia del Derecho, <em>conversando con quienes la vivieron</em></h1>
+    <p class="lede" data-i18n="hero.lede">Atiende a clientes de otras épocas, juzga pleitos con abogados que alegan, debate en las Cortes y comenta fuentes con un tutor que pregunta. La IA da vida a los personajes; el código comprueba cada dato contra el material de la asignatura.</p>
+    <div class="actions"><button class="btn btn-primary btn-big" id="btnStart" type="button"><svg class="i"><use href="#i-play"/></svg><span data-i18n="s.empezar">Empezar</span></button><button class="btn btn-ghost btn-big" id="btnEjemplo" type="button"><svg class="i"><use href="#i-eye"/></svg><span data-i18n="s.ejemplo">Consulta de ejemplo, sin clave</span></button></div>
+    <p class="fa-inicio" id="inicioProj"></p>
+    <div class="fa-autores"><span class="fa-autores-cap" data-i18n="Realizada entre">Realizada entre</span>
+      <div class="fa-autor"><span class="fa-av" style="--c:#E4572E">FB</span><div><b>Fernando Borrás Rocher</b><small>Universidad Miguel Hernández de Elche</small><a class="fa-orcid" href="https://orcid.org/0000-0002-5519-4573" target="_blank" rel="noopener">ORCID 0000-0002-5519-4573</a></div></div><span class="fa-x">×</span>
+      <div class="fa-autor"><span class="fa-av" style="--c:#0E8C7A">JA</span><div><b>José Antonio Pérez Juan</b><small>Universidad Miguel Hernández de Elche</small><a class="fa-orcid" href="https://orcid.org/0000-0002-9973-683X" target="_blank" rel="noopener">ORCID 0000-0002-9973-683X</a></div></div><span class="fa-x">×</span>
+      <div class="fa-autor"><span class="fa-av" style="--c:#1F6FB2">SM</span><div><b>Sara Moreno Tejada</b><small>Universidad Miguel Hernández de Elche</small><a class="fa-orcid" href="https://orcid.org/0000-0003-3154-7730" target="_blank" rel="noopener">ORCID 0000-0003-3154-7730</a></div></div>
+      <p class="fa-idea">Contenidos elaborados a partir de las unidades didácticas de la asignatura 1193 Historia del Derecho (UMH), de José Antonio Pérez Juan y Sara Moreno Tejada.</p></div>
+  </div>
+
+  <h2 class="sec-title" data-i18n="Cómo funciona">Cómo funciona</h2>
+  <div class="journey" style="grid-template-columns:repeat(auto-fit,minmax(180px,1fr))">
+    <div class="jstop" style="--c:#6B4FD8"><span class="jn">1</span><div class="ji"><svg class="i"><use href="#i-target"/></svg></div><b data-i18n="Práctica">Práctica</b><span data-i18n="j1">Preguntas de los 18 temas, elegidas para ti. Sin clave.</span></div>
+    <div class="jstop" style="--c:#E4572E"><span class="jn">2</span><div class="ji"><svg class="i"><use href="#i-chat"/></svg></div><b data-i18n="Consulta">Consulta</b><span data-i18n="j2">Un cliente de otra época te cuenta su problema. Puedes hablarle de viva voz.</span></div>
+    <div class="jstop" style="--c:#1F6FB2"><span class="jn">3</span><div class="ji"><svg class="i"><use href="#i-scale"/></svg></div><b data-i18n="Laboratorios">Laboratorios</b><span data-i18n="j3">Juzga, caza anacronismos, debate en Cortes y reconoce constituciones.</span></div>
+    <div class="jstop" style="--c:#0E8C7A"><span class="jn">4</span><div class="ji"><svg class="i"><use href="#i-doc"/></svg></div><b data-i18n="Dossier">Dossier</b><span data-i18n="j4">Comenta tus seis fuentes con un tutor y ensaya la defensa oral.</span></div>
+    <div class="jstop" style="--c:#C98200"><span class="jn">5</span><div class="ji"><svg class="i"><use href="#i-pulse"/></svg></div><b data-i18n="Progreso">Progreso</b><span data-i18n="j5">Tu dominio por resultado de aprendizaje y qué repasar.</span></div>
+  </div>
+  <div class="actions"><button class="btn btn-ghost" type="button" data-hub="8"><svg class="i"><use href="#i-book"/></svg><span data-i18n="Temario">Temario</span></button><button class="btn btn-ghost" type="button" data-hub="6"><svg class="i"><use href="#i-calendar"/></svg><span data-i18n="Cronología">Cronología</span></button><button class="btn btn-ghost" type="button" data-hub="7"><svg class="i"><use href="#i-users"/></svg><span data-i18n="Profesorado">Profesorado</span></button></div>
+  <h2 class="sec-title" data-i18n="Lo que hace el código y lo que hace la IA">Lo que hace el código y lo que hace la IA</h2>
+  <div class="zonas"><div class="zona l"><h4 data-i18n="El código">El código</h4><ul data-i18n="zc"><li>Corrige la práctica, los dictámenes y los laboratorios</li><li>Comprueba que cada cita y cada hecho que dice un personaje están en el material de la asignatura</li><li>Elimina cualquier nota que intente poner la IA</li></ul></div>
+    <div class="zona n"><h4 data-i18n="La IA (con tu clave)">La IA (con tu clave)</h4><ul data-i18n="zi"><li>Interpreta a clientes, abogados, diputados y tutores</li><li>Comenta tu razonamiento sin ponerte nota</li><li>Sin clave, los personajes responden en modo guiado</li></ul></div></div>
+  <h2 class="sec-title" data-i18n="Dónde va cada cosa">Dónde va cada cosa</h2>
+  <div class="zonas"><div class="zona l"><h4 data-i18n="Siempre en tu ordenador">Siempre en tu ordenador</h4><ul data-i18n="s.zl"><li>Tus respuestas, tus comentarios y tu progreso, guardados en este navegador</li><li>Tu clave de IA</li><li>Las correcciones y las descargas</li></ul></div>
+    <div class="zona n"><h4 data-i18n="Sale hacia tu proveedor de IA">Sale hacia tu proveedor de IA</h4><ul data-i18n="s.zn"><li>Solo cuando hablas con un personaje o pides comentario: tu mensaje y el material del caso, con los datos personales enmascarados</li><li>Antes del primer envío ves lo que sale</li></ul></div></div>
+</section>
+
+<section class="screen" data-step="1">
+  <header class="sh" style="--c:#6B4FD8"><div class="sh-ico"><svg class="i"><use href="#i-target"/></svg></div><div><p class="sh-step" data-i18n="Paso 1 de 5">Paso 1 de 5</p><h2 data-i18n="Práctica adaptativa">Práctica adaptativa</h2><p class="sh-lede" data-i18n="pr.lede">Cada respuesta actualiza tu dominio de ese resultado de aprendizaje. La siguiente pregunta la elige el código y te dice por qué.</p></div></header>
+  <div class="card cu-filtros"><div class="field"><label for="selTema" data-i18n="Tema que estáis viendo en clase">Tema que estáis viendo en clase</label><select id="selTema"></select></div></div>
+  <div class="card" id="prBox" aria-live="polite"></div>
+</section>
+
+<section class="screen" data-step="2">
+  <header class="sh" style="--c:#E4572E"><div class="sh-ico"><svg class="i"><use href="#i-chat"/></svg></div><div><p class="sh-step" data-i18n="Paso 2 de 5">Paso 2 de 5</p><h2 data-i18n="Consulta jurídica">Consulta jurídica</h2><p class="sh-lede" data-i18n="co.lede">Un cliente de otra época llega a tu despacho. Pregúntale lo necesario, decide qué derecho se aplica y qué tribunal es competente, y emite tu dictamen.</p></div></header>
+  <div class="card"><div class="cu-row2"><div class="field"><label for="selCaso" data-i18n="Caso">Caso</label><select id="selCaso"></select></div><div class="field"><label for="selNivel" data-i18n="Nivel">Nivel</label><select id="selNivel"><option value="1" data-i18n="Inicial: el cliente colabora">Inicial: el cliente colabora</option><option value="2" data-i18n="Intermedio: responde solo a lo que preguntas">Intermedio: responde solo a lo que preguntas</option><option value="3" data-i18n="Avanzado: oculta un dato">Avanzado: oculta un dato</option></select></div></div>
+    <p class="help" id="coModo"></p></div>
+  <div class="card"><h3 id="coTit"></h3><div class="cu-chat" id="coChat" aria-live="polite"></div>
+    <div class="field"><label for="coIn" data-i18n="Tu pregunta">Tu pregunta</label><textarea id="coIn" rows="2" placeholder="Escribe o pulsa el micrófono y habla" data-i18n-attr="placeholder:Escribe o pulsa el micrófono y habla"></textarea><p class="help cu-interim" id="coInterim"></p></div>
+    <div class="actions"><button class="btn btn-ghost cu-mic" id="coMic" type="button" aria-pressed="false"><svg class="i"><use href="#i-mic"/></svg><span data-i18n="Hablar">Hablar</span></button><button class="btn btn-primary" id="coEnviar" type="button"><svg class="i"><use href="#i-right"/></svg><span data-i18n="Preguntar">Preguntar</span></button><label class="fa-chk"><input type="checkbox" id="coVoz"> <span data-i18n="Leer en voz alta las respuestas">Leer en voz alta las respuestas</span></label></div>
+    <p class="help" id="coEstado"></p><div id="coHechos"></div></div>
+  <div class="card" id="coDict"></div>
+</section>
+
+<section class="screen" data-step="3">
+  <header class="sh" style="--c:#1F6FB2"><div class="sh-ico"><svg class="i"><use href="#i-scale"/></svg></div><div><p class="sh-step" data-i18n="Paso 3 de 5">Paso 3 de 5</p><h2 data-i18n="Laboratorios">Laboratorios</h2><p class="sh-lede" data-i18n="la.lede">Cuatro actividades para entrenar el oficio del historiador del Derecho. La IA da voz a abogados, diputados y adversarios; el código sabe siempre cuál es la respuesta.</p></div></header>
+  <div class="tabs" id="labTabs" role="tablist"><button type="button" data-lab="pleito" aria-pressed="true" data-i18n="El pleito en cinco épocas">El pleito en cinco épocas</button><button type="button" data-lab="detective" aria-pressed="false" data-i18n="Detective de anacronismos">Detective de anacronismos</button><button type="button" data-lab="cortes" aria-pressed="false" data-i18n="Cortes en el aula">Cortes en el aula</button><button type="button" data-lab="const" aria-pressed="false" data-i18n="¿De qué constitución es?">¿De qué constitución es?</button></div>
+  <div class="card" id="labBox" aria-live="polite"></div>
+</section>
+
+<section class="screen" data-step="4">
+  <header class="sh" style="--c:#0E8C7A"><div class="sh-ico"><svg class="i"><use href="#i-doc"/></svg></div><div><p class="sh-step" data-i18n="Paso 4 de 5">Paso 4 de 5</p><h2 data-i18n="Dossier de fuentes">Dossier de fuentes</h2><p class="sh-lede" data-i18n="do.lede">Seis textos asignados por tu código de estudiante. Coméntalos paso a paso con un tutor que pregunta y no escribe por ti; después ensaya la defensa oral.</p></div></header>
+  <div class="card"><div class="cu-row2"><div class="field"><label for="doCod" data-i18n="Tu código de estudiante">Tu código de estudiante</label><input id="doCod" autocomplete="off" placeholder="p. ej., tu usuario del campus" data-i18n-attr="placeholder:p. ej., tu usuario del campus"></div><div class="field"><label for="selTexto" data-i18n="Texto">Texto</label><select id="selTexto"></select></div></div></div>
+  <div class="card" id="doTexto"></div>
+  <div class="card" id="doPasos"></div>
+  <div class="card" id="doDefensa"></div>
+</section>
+
+<section class="screen" data-step="5">
+  <header class="sh" style="--c:#C98200"><div class="sh-ico"><svg class="i"><use href="#i-pulse"/></svg></div><div><p class="sh-step" data-i18n="Paso 5 de 5">Paso 5 de 5</p><h2 data-i18n="Tu progreso">Tu progreso</h2><p class="sh-lede" data-i18n="pg.lede">Dominio estimado por resultado de aprendizaje: probabilidad de acertar, descontando el olvido. Es una orientación, no una nota.</p></div></header>
+  <div class="card" id="pgBox"></div>
+  <div class="card"><h3 data-i18n="Copia y entrega">Copia y entrega</h3><p class="help" data-i18n="pg.copia">La copia guarda todo tu trabajo para pasarlo a otro dispositivo. El fichero de entrega lleva tu código, tu progreso y tus comentarios del dossier: es lo que subes al campus virtual.</p>
+    <div class="actions"><button class="btn btn-ghost" id="btnCopia" type="button" data-i18n="Descargar copia">Descargar copia</button><label class="btn btn-ghost" for="fCopia" data-i18n="Restaurar copia">Restaurar copia</label><input type="file" id="fCopia" accept=".json" hidden><button class="btn btn-primary" id="btnEntrega" type="button" data-i18n="Fichero de entrega">Fichero de entrega</button><button class="btn btn-word" id="btnDossierW" type="button">Word</button><button class="btn btn-ghost" id="btnBorra" type="button" data-i18n="Borrar todo">Borrar todo</button></div></div>
+</section>
+
+<section class="screen" data-step="6">
+  <header class="sh" style="--c:#C98200"><div class="sh-ico"><svg class="i"><use href="#i-calendar"/></svg></div><div><p class="sh-step" data-i18n="Sección">Sección</p><h2 data-i18n="Cronología">Cronología</h2><p class="sh-lede" data-i18n="cr.lede">Todas las fechas de las unidades didácticas. Oculta los años para ponerte a prueba.</p></div></header>
+  <div class="card"><div class="cu-row2"><div class="field"><label for="crU" data-i18n="Unidad">Unidad</label><select id="crU"></select></div><label class="fa-chk" style="align-self:end"><input type="checkbox" id="crOc"> <span data-i18n="Ocultar los años">Ocultar los años</span></label></div><div id="crBox"></div></div>
+</section>
+
+<section class="screen" data-step="7">
+  <header class="sh" style="--c:#6B4FD8"><div class="sh-ico"><svg class="i"><use href="#i-users"/></svg></div><div><p class="sh-step" data-i18n="Sección">Sección</p><h2 data-i18n="Profesorado">Profesorado</h2><p class="sh-lede" data-i18n="pf.lede">Defensas orales con rúbrica, seguimiento a partir de los ficheros de entrega y exportación a ExamForge y Moodle. Todo se procesa en este navegador.</p></div></header>
+  <div class="card"><h3 data-i18n="Defensas orales">Defensas orales</h3><p class="help" data-i18n="pf.def">Carga el fichero de entrega del estudiante: se sortea uno de sus seis textos y puntúas con la rúbrica. Las notas se exportan a CSV.</p>
+    <div class="actions"><label class="btn btn-ghost" for="fDef" data-i18n="Cargar entrega">Cargar entrega</label><input type="file" id="fDef" accept=".json" hidden><button class="btn btn-ghost" id="btnDefCsv" type="button" data-i18n="Exportar notas (CSV)">Exportar notas (CSV)</button></div><div id="pfDef"></div></div>
+  <div class="card"><h3 data-i18n="Seguimiento de la práctica">Seguimiento de la práctica</h3><div class="actions"><label class="btn btn-ghost" for="fSeg" data-i18n="Cargar ficheros de entrega">Cargar ficheros de entrega</label><input type="file" id="fSeg" accept=".json" multiple hidden></div><div id="pfSeg"></div></div>
+  <div class="card"><h3 data-i18n="Exportar">Exportar</h3><div class="field"><label for="pfU" data-i18n="Unidad">Unidad</label><select id="pfU"></select></div>
+    <div class="actions"><button class="btn btn-primary" id="btnEF" type="button" data-i18n="Material para ExamForge">Material para ExamForge</button><button class="btn btn-ghost" id="btnGift" type="button">Moodle GIFT</button></div><p class="help" data-i18n="pf.ef">El material para ExamForge reúne los resúmenes, los pasajes literales y la cronología de la unidad: se pega en su paso 1 y cada respuesta correcta tendrá que apoyarse en una cita de él.</p></div>
+</section>
+
+<section class="screen" data-step="8">
+  <header class="sh" style="--c:#1F6FB2"><div class="sh-ico"><svg class="i"><use href="#i-book"/></svg></div><div><p class="sh-step" data-i18n="Sección">Sección</p><h2 data-i18n="Temario">Temario</h2><p class="sh-lede" data-i18n="te.lede">Resumen, ideas clave, glosario y pasajes literales de cada unidad didáctica. Son la base que usan los personajes y que comprueba el código.</p></div></header>
+  <div class="card"><div class="field"><label for="teSel" data-i18n="Tema">Tema</label><select id="teSel"></select></div><div id="teBox"></div></div>
+</section>
+</main>
+
+<footer class="fa-foot"><hr><p><b>CurIA</b> · Fernando Borrás Rocher · José Antonio Pérez Juan · Sara Moreno Tejada · Universidad Miguel Hernández de Elche. <span data-i18n="f.pie">Herramienta de apoyo: la IA puede equivocarse y la decisión final es tuya. Tus datos se guardan solo en este navegador.</span></p></footer>
+<div class="bottomnav"><div class="bn-in"><button class="btn btn-ghost" id="navBack" type="button"><svg class="i"><use href="#i-left"/></svg><span data-i18n="Atrás">Atrás</span></button><div class="bn-hint" id="navHint"></div><button class="btn btn-primary" id="navNext" type="button"><span id="navNextTxt">Siguiente</span><svg class="i"><use href="#i-right"/></svg></button></div></div>
+
+<div class="modal" id="mIA" role="dialog" aria-modal="true" aria-labelledby="mIAT"><div class="modal-box"><div class="modal-head"><h2 id="mIAT" data-i18n="Inteligencia artificial">Inteligencia artificial</h2><button type="button" data-close data-i18n="Cerrar">Cerrar</button></div><div class="modal-body">
+  <div class="field"><label for="selProv" data-i18n="Proveedor">Proveedor</label><select id="selProv"><option value="openai">OpenAI</option><option value="gemini">Google Gemini</option><option value="anthropic">Anthropic Claude</option></select></div>
+  <div class="field"><label for="apiKey" data-i18n="Tu clave de API">Tu clave de API</label><div class="keyrow"><input type="password" id="apiKey" autocomplete="off"><button class="eye" id="btnEye" type="button" aria-label="Ver" data-i18n-attr="aria-label:Ver"><svg class="i"><use href="#i-eye"/></svg></button></div></div>
+  <div class="field"><label for="selModelo" data-i18n="Modelo">Modelo</label><select id="selModelo"></select><input type="text" id="modelo" hidden autocomplete="off" placeholder="Escribe el nombre exacto del modelo" data-i18n-attr="placeholder:Escribe el nombre exacto del modelo" style="margin-top:8px"></div>
+  <div class="actions"><button class="btn btn-ghost btn-sm" id="btnModelos" type="button" data-i18n="Ver los modelos de mi clave">Ver los modelos de mi clave</button></div>
+  <p class="help" id="iaEstado" data-i18n="f.ia.ayuda">La clave se guarda solo en este navegador y se envía únicamente a tu proveedor. Cada persona usa la suya y paga su propio uso. Elige un modelo económico: este uso no necesita el más potente.</p></div></div></div>
+<div class="modal" id="mEnvio" role="dialog" aria-modal="true" aria-labelledby="mEnT"><div class="modal-box"><div class="modal-head"><h2 id="mEnT" data-i18n="Esto es lo que saldría hacia tu proveedor de IA">Esto es lo que saldría hacia tu proveedor de IA</h2><button type="button" data-close data-i18n="Cerrar">Cerrar</button></div><div class="modal-body"><div id="envioInfo"></div><pre class="fa-pre" id="envioTxt"></pre><label class="fa-chk" style="margin:12px 0"><input type="checkbox" id="envioOk"> <span data-i18n="f.envio.chk">He revisado la muestra y confirmo que puede salir de mi ordenador.</span></label><div class="actions"><button class="btn btn-primary" id="envioSi" type="button" disabled data-i18n="s.enviar">Enviar</button><button class="btn btn-ghost" id="envioNo" type="button" data-i18n="Cancelar">Cancelar</button></div></div></div></div>
+<div class="modal" id="mHelp" role="dialog" aria-modal="true" aria-labelledby="mHelpT"><div class="modal-box"><div class="modal-head"><h2 id="mHelpT" data-i18n="Ayuda">Ayuda</h2><button type="button" data-close data-i18n="Cerrar">Cerrar</button></div><div class="modal-body"><div class="glos" id="glos"></div></div></div></div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>

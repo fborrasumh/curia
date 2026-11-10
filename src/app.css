@@ -1,0 +1,48 @@
+/* ══ Estilos propios de la app (se añaden a forja-base.css). Prefijo fa- para no chocar con clases de Forja ══ */
+.logo .anv{background:linear-gradient(135deg,var(--brasa),#C98200)}
+.hero{padding:44px 38px 30px}.hero h1{max-width:20ch}.fa-inicio{margin:14px 0 0;font-size:14px;color:#C3D3E2}.fa-inicio:empty{display:none}.fa-inicio b{color:#fff}
+/* autores con ORCID */
+.fa-autores{display:flex;gap:14px;align-items:center;flex-wrap:wrap;margin-top:24px;padding-top:20px;border-top:1px solid rgba(255,255,255,.14)}.fa-autores-cap{font:600 11px var(--mono);letter-spacing:.16em;text-transform:uppercase;color:#8FA7BE;width:100%;margin-bottom:-4px}
+.fa-autor{display:flex;gap:11px;align-items:center}.fa-autor b{display:block;color:#fff;font:700 16px var(--display)}.fa-autor small{display:block;color:#9DB6CD;font-size:12.5px;max-width:34ch}.fa-av{width:44px;height:44px;border-radius:14px;background:var(--c);color:#fff;display:grid;place-items:center;font:800 15px var(--display);flex:none;box-shadow:0 10px 20px -12px var(--c)}.fa-x{font:300 26px var(--display);color:#5D7C9B}
+.fa-orcid{display:block;margin-top:2px;font:600 11.5px var(--mono);letter-spacing:.02em;color:#7FD6C4!important;text-decoration:none}.fa-orcid:hover{text-decoration:underline}.fa-idea{width:100%;margin:2px 0 0;font-size:13px;color:#9DB6CD;max-width:72ch}
+/* zonas «dónde va cada cosa» */
+.zonas{display:grid;grid-template-columns:1fr 1fr;gap:12px}@media(max-width:760px){.zonas{grid-template-columns:1fr}}.zona{border-radius:16px;padding:14px 16px;border:2px solid}.zona.l{border-color:#9FD9C4;background:var(--forjado-suave)}.zona.n{border-color:#E9C46A;background:#FFF8E6}.zona h4{margin:0 0 6px;font-family:var(--display);font-size:18px}.zona ul{margin:0;padding-left:18px;font-size:14px;line-height:1.7}
+.sec-title+.zonas,.sec-title+.journey{margin-top:14px}
+/* formularios y utilidades */
+.field input[type=text],.field input[type=number],.field select,.field textarea{width:100%;padding:10px 12px;border:1.5px solid var(--linea);border-radius:10px;font:15px var(--texto);background:#fff;color:var(--tinta)}.field textarea{line-height:1.55;resize:vertical}.field label{display:block;font:700 13px var(--texto);color:var(--acero);margin-bottom:5px}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--brasa);box-shadow:0 0 0 3px rgba(228,87,46,.18)}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px}@media(max-width:760px){.grid3,.grid2{grid-template-columns:1fr}}
+.card .actions{margin-top:12px}.card h3{margin-top:0}.fa-chk{display:flex;gap:8px;align-items:center;font:500 14.5px var(--texto);cursor:pointer}
+.fa-chip{display:inline-block;font:700 11.5px var(--texto);border-radius:999px;padding:3px 10px;background:var(--linea-2);color:var(--acero)}.fa-chip.ok{background:var(--forjado-suave);color:#0B5A4E}.fa-chip.aviso{background:#FFF1D6;color:#7A4B00}.fa-chip.error{background:var(--brasa-suave);color:var(--aviso)}
+.fa-pre{white-space:pre-wrap;font:12.5px/1.5 var(--mono);background:#0B1C2E;color:#D6E4F0;border-radius:12px;padding:12px;max-height:300px;overflow:auto}
+.spin{display:inline-block;width:14px;height:14px;border:2px solid var(--linea);border-top-color:var(--brasa);border-radius:50%;animation:fa-s .8s linear infinite;vertical-align:-2px}@keyframes fa-s{to{transform:rotate(360deg)}}
+.fa-foot{max-width:1180px;margin:10px auto 0;padding:0 16px 110px}.fa-foot hr{border:0;border-top:1px solid var(--linea);margin:0 0 16px}.fa-foot p{margin:0;font-size:12.8px;color:#6E8299;max-width:76ch;line-height:1.55}
+.glos div{display:block;margin-bottom:12px}.glos b{display:block}
+table{border-collapse:collapse;width:100%;font-size:13.8px}th{background:var(--papel);color:var(--acero);font:700 11px var(--mono);letter-spacing:.07em;text-transform:uppercase;text-align:left}td,th{padding:10px 12px;border-bottom:1px solid var(--linea-2);vertical-align:top}.table-wrap{overflow-x:auto}
+/* barra superior con muchos pasos: solo el actual lleva nombre (evita desbordes) */
+.tb-in{gap:10px}.stepper{min-width:0;flex:1 1 auto;justify-content:center;gap:2px}.sdot:not([data-state="now"]) .lbl{display:none}.sdot{padding-left:4px;padding-right:4px}.sline{min-width:8px;flex:0 1 22px}.logo,.tb-tools{flex:none}
+@media(max-width:900px){.tb-btn .lbl{display:none}}@media(max-width:720px){.hero{padding:28px 20px 24px}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+/* ── CurIA ── */
+.cu-row2{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(240px,100%),1fr));gap:12px}
+.cu-motivo{color:var(--acero);font-size:.92rem;margin:0 0 4px}.cu-meta{font-family:var(--mono);font-size:.78rem;color:var(--gris);margin:0}
+.cu-q{display:block;margin:10px 0 14px;font-size:1.15rem}
+.cu-ops{display:grid;gap:8px}.cu-op{text-align:left;padding:12px 14px;border:1.5px solid var(--linea);border-radius:10px;background:#fff;font:inherit;cursor:pointer;min-height:44px}
+.cu-op:hover:not(:disabled){border-color:var(--acero)}.cu-op:disabled{cursor:default}.cu-bien{border-color:var(--forjado);background:var(--forjado-suave)}.cu-mal{border-color:var(--brasa);background:var(--brasa-suave)}
+.cu-pas{border-left:3px solid var(--acero-claro);padding:4px 10px;margin:8px 0;font-style:italic;color:#24364a}
+.cu-chat{max-height:420px;overflow:auto;display:flex;flex-direction:column;gap:8px;margin:8px 0 12px}
+.cu-msg{padding:10px 12px;border-radius:12px;max-width:85%;line-height:1.45}.cu-msg b{display:block;font-size:.78rem;font-family:var(--mono);margin-bottom:2px}
+.cu-c{background:var(--papel);border:1px solid var(--linea);align-self:flex-start}.cu-u{background:#E8F0FA;align-self:flex-end}
+.cu-av{display:block;color:var(--aviso);margin-top:4px}.cu-interim{min-height:1.2em;font-style:italic}
+.cu-mic.cu-on{border-color:var(--brasa);color:var(--brasa-osc);background:var(--brasa-suave)}
+.cu-fs{border:1px solid var(--linea);border-radius:10px;padding:8px 12px;margin:10px 0}.cu-fs legend{font-weight:600;padding:0 4px}
+.cu-rad{display:flex;gap:8px;align-items:flex-start;padding:6px 0;min-height:32px}.cu-ord li{margin:4px 0}
+.cu-ia{background:#F4F1FD;border:1px solid #DCD3FA;border-radius:10px;padding:10px 12px;margin:8px 0}
+.cu-txt{background:var(--papel);border-left:4px solid var(--acero);margin:8px 0;padding:10px 14px;line-height:1.55}
+.cu-paso{border-top:1px solid var(--linea-2);padding-top:10px;margin-top:10px}
+.cu-det{list-style:none;padding:0}.cu-det li{padding:6px 0;border-bottom:1px solid var(--linea-2)}
+.cu-bar{display:grid;grid-template-columns:minmax(0,1fr) 120px 48px;gap:10px;align-items:center;margin:6px 0}.cu-bar-b{height:10px;background:var(--linea-2);border-radius:6px;overflow:hidden}.cu-bar-b i{display:block;height:100%;background:var(--forjado)}
+.cu-crono{list-style:none;padding:0}.cu-crono li{padding:5px 0;border-bottom:1px solid var(--linea-2)}.cu-y{font-family:var(--mono);font-weight:700;border:1px solid var(--linea);background:#fff;border-radius:6px;min-width:70px;padding:3px 6px;cursor:pointer}
+.cu-dl dt{font-weight:600;margin-top:6px}.cu-dl dd{margin:0 0 4px}
+.cu-tab{border-collapse:collapse;width:100%;font-size:.88rem}.cu-tab td,.cu-tab th{border-bottom:1px solid var(--linea);padding:6px;text-align:left}
+@media (max-width:640px){.cu-bar{grid-template-columns:minmax(0,1fr) 70px 42px}.cu-msg{max-width:100%}}

@@ -1,0 +1,75 @@
+{
+  "slug": "curia",
+  "name": "CurIA",
+  "tagline": "Historia del Derecho con IA: consulta jurídica, laboratorios y dossier de fuentes",
+  "eyebrow": "Historia del Derecho · 1193 · Grado en Derecho · Universidad Miguel Hernández de Elche",
+  "h1": "Historia del Derecho, *conversando con quienes la vivieron*",
+  "lede": "Atiende a clientes de otras épocas, juzga pleitos con abogados que alegan, debate en las Cortes y comenta fuentes con un tutor que pregunta. La IA da vida a los personajes; el código comprueba cada dato contra el material de la asignatura.",
+  "logo_icon": "scale",
+  "ia": true,
+  "lang": "es",
+  "langs": [
+    "es",
+    "en",
+    "pt"
+  ],
+  "i18n": {
+    "en": {
+      "title": "CurIA · Legal History with AI",
+      "eyebrow": "Legal History · 1193 · Law Degree · Miguel Hernández University of Elche",
+      "h1": "Legal History, *talking with those who lived it*",
+      "lede": "Advise clients from other eras, judge lawsuits with arguing lawyers, debate in the Cortes and comment on sources with a tutor who asks questions. The AI brings the characters to life; the code checks every fact against the course material."
+    },
+    "pt": {
+      "title": "CurIA · História do Direito com IA",
+      "eyebrow": "História do Direito · 1193 · Licenciatura em Direito · Universidade Miguel Hernández de Elche",
+      "h1": "História do Direito, *conversando com quem a viveu*",
+      "lede": "Atenda clientes de outras épocas, julgue pleitos com advogados que alegam, debata nas Cortes e comente fontes com um tutor que pergunta. A IA dá vida às personagens; o código verifica cada dado face ao material da unidade curricular."
+    }
+  },
+  "authors": [
+    {
+      "name": "Fernando Borrás Rocher",
+      "orcid": "0000-0002-5519-4573",
+      "affiliation": "Universidad Miguel Hernández de Elche"
+    },
+    {
+      "name": "José Antonio Pérez Juan",
+      "orcid": "0000-0002-9973-683X",
+      "affiliation": "Universidad Miguel Hernández de Elche"
+    },
+    {
+      "name": "Sara Moreno Tejada",
+      "orcid": "0000-0003-3154-7730",
+      "affiliation": "Universidad Miguel Hernández de Elche"
+    }
+  ],
+  "idea_credit": "Contenidos elaborados a partir de las unidades didácticas de la asignatura 1193 Historia del Derecho (UMH), de José Antonio Pérez Juan y Sara Moreno Tejada.",
+  "modules": [
+    "00-utils",
+    "10-persist",
+    "20-providers",
+    "30-verify",
+    "60-nav",
+    "65-i18n",
+    "70-report"
+  ],
+  "app_js": [
+    "datos.js",
+    "base.js",
+    "nucleo.js",
+    "app.js"
+  ],
+  "catalog": {
+    "cat": "doc",
+    "icon": "ti-scale",
+    "sub_es": "Historia del Derecho con IA: consulta jurídica por voz, laboratorios y dossier de fuentes",
+    "sub_en": "Legal History with AI: voice legal consultation, labs and source dossier",
+    "desc_es": "Sistema de aprendizaje de la asignatura 1193 Historia del Derecho (UMH) construido sobre sus unidades didácticas. Práctica adaptativa por resultado de aprendizaje, consulta jurídica con clientes de otras épocas (se puede hablar de viva voz), laboratorios con abogados, diputados y tutores simulados, dossier de comentario de fuentes con ensayo de defensa oral y panel del profesorado con exportación a ExamForge y Moodle. La IA interpreta a los personajes; el código corrige y comprueba hechos y citas contra el material. Funciona en el navegador con la clave de IA de cada persona; la práctica, la cronología y la consulta en modo guiado funcionan sin clave.",
+    "desc_en": "Learning system for course 1193 Legal History (UMH), built on its teaching units. Adaptive practice by learning outcome, legal consultation with clients from other eras (you can speak aloud), labs with simulated lawyers, deputies and tutors, a source-commentary dossier with oral-defence rehearsal, and a teacher panel with export to ExamForge and Moodle. The AI plays the characters; the code marks answers and checks facts and quotes against the material. Runs in the browser with each person's own AI key; practice, timeline and guided consultation work without a key.",
+    "tit_es": "Grado en Derecho",
+    "comp_es": "Historia del Derecho · Comentario de textos histórico-jurídicos · Interpretación histórica del Derecho vigente",
+    "tit_en": "Law Degree",
+    "comp_en": "Legal history · Commentary on historical legal texts · Historical interpretation of current law"
+  }
+}

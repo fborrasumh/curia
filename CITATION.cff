@@ -16,7 +16,7 @@ authors:
     affiliation: "Universidad Miguel Hernández de Elche"
     orcid: "https://orcid.org/0000-0003-3154-7730"
 doi: "10.5281/zenodo.24111387"
-version: "1.0.0"
+version: "1.0.1"
 date-released: "2026-11-10"
 url: "https://fborrasumh.github.io/curia/"
 repository-code: "https://github.com/fborrasumh/curia"
